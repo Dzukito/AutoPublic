@@ -19,7 +19,7 @@
 # Clonar el repo
 $ git clone https://github.com/Dzukito/AutoPublic.git
 
-# Instalar las librerias correspondientes
+# Instalar las librerias necesar9as
 $ pip install requests
 $ pip install pandas
 $ pip install beautifulsoup4
