@@ -52,4 +52,4 @@ Si se el CSV se ve feo y queremos que se vea bonito en excel, seguir estos pasos
 * Ir a Datos->Texto en columnas->Delimitados (y siguiente)->Coma (y siguiente)->Texto (general aveces va masomenos)
 
 ## Demo
-[![Watch the video](https://i.postimg.cc/bv4sGr4F/image.png)](https://www.youtube.com/watch?v=1g_TaxVGizk)
+https://www.youtube.com/watch?v=1g_TaxVGizk
