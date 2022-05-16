@@ -39,10 +39,8 @@ $ cd AutoPublic
 $ python AutPublic.py
 ```
 Ingresar mes y dia para filtrar la informacion (2022 viene por defecto)
-	
-> Aclaracion importante 1: ojo si es lunes, correr el script para el sabado y el domingo. Al final habra 3 CSV (sabado,domingo y lunes) a los que podes unir vos mismo en 1 solo.
-	
-> Aclaracion importante 2: el script trae info del dia solicitado, asi que revisar tambien el dia de ayer por si se subio algun IOC fuera del trabajo y hay que agregarlo hoy (tendras 2 CSV entonces).
+		
+> Aclaracion importante: el script trae info del dia solicitado, asi que revisar tambien el dia de ayer por si se subio algun IOC durante las horas en las que no se corrió el script para agregarlo hoy (habrá tantos CSV como días, queda en manos del analista unir la información en uno solo si se desea).
 
 ## Sobre el output
 
