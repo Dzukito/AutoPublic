@@ -32,7 +32,7 @@ $ cd AutoPublic
 ## Configuración
 
  Abrir el script en un editor e ir a la seccion de Feodo, en la linea rodeada por signos de peso $$$ y cambiar
-   el path del local_file que se desee, cambiando el usuario. OJO: no tocar el nombre del archivo por si acaso :)
+   el path del local_file al que se desee, modificando tambien el usuario. Atención: no tocar el nombre del archivo por si acaso :)
 
 ## Uso
 
