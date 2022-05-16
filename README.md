@@ -41,9 +41,9 @@ $ python AutPublic.py
 ```
 Ingresar mes y dia para filtrar la informacion (2022 viene por defecto)
 		
-> Aclaracion importante: el script trae info del dia solicitado, asi que revisar tambien el dia de ayer por si se subio algun IOC durante las horas en las que no se corrió el script para agregarlo hoy (habrá tantos CSV como días, queda en manos del analista unir la información en uno solo si se desea). Esto se soluciona en AutoPublic2days pero no contempla el caso Lunes donde se necesita sabado y domingo.
+> Aclaracion importante: el script trae info del dia solicitado, asi que revisar tambien el dia de ayer por si se subio algun IOC durante las horas en las que no se corrió el script para agregarlo hoy (habrá tantos CSV como días, queda en manos del analista unir la información en uno solo si se desea). Esto se soluciona en AutoPublic2days, pero NO contempla el Caso Lunes donde se necesita sabado y domingo.
 
-> AutoPublic FullAuto contempla caso Lunes y agrega automatización completa, pero pierde libertad a la hora de checkear fechas pasadas
+> AutoPublic FullAuto contempla Caso Lunes y agrega automatización completa, pero pierde libertad a la hora de checkear fechas pasadas
 
 
 ## Demo
