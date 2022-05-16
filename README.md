@@ -23,6 +23,7 @@ $ git clone https://github.com/Dzukito/AutoPublic.git
 $ pip install requests
 $ pip install pandas
 $ pip install beautifulsoup4
+$ pip install lxml
 
 # Entrar en el directorio del proyecto
 $ cd AutoPublic
