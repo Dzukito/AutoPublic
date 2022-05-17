@@ -39,7 +39,15 @@ Ingresar mes y dia para filtrar la informacion (2022 viene por defecto)
 		
 > Aclaracion importante: el script trae info del dia solicitado, asi que revisar tambien el dia de ayer por si se subio algun IOC durante las horas en las que no se corrió el script para agregarlo hoy (habrá tantos CSV como días, queda en manos del analista unir la información en uno solo si se desea). Esto se soluciona en AutoPublic2days, pero NO contempla el Caso Lunes donde se necesita sabado y domingo.
 
-> AutoPublic FullAuto contempla Caso Lunes y agrega automatización completa, pero pierde libertad a la hora de checkear fechas pasadas. Ademas, las familias a buscar son personalizables en un txt.
+#### AutoPublic FullAuto Version
+```
+- Al arrancar ya sabe que día es sin necesidad de aclararlo
+- Solo te va a preguntar a que hora de ayer lo ejecutaste. Ejemplo: 10:30 (y hace la conversión a UTC)
+- Recopila entonces todos los IOC de hoy + los IOC de ayer desde las 10:31 hasta el final de dicho día
+- Si es LUNES, ni te pregunta a que hora lo ejecutaste, agarra solo Sabado, Domingo y Lunes
+- Las familias de Malware Bazaar a analizar las toma de un archivo personalizable llamado familias.txt
+- Algunos detalles extras, como un control en el input del horario (xx:xx)
+```
 
 
 ## Demo
