@@ -42,11 +42,11 @@ Ingresar mes y dia para filtrar la informacion (2022 viene por defecto)
 #### AutoPublic FullAuto Version
 ```
 - Al arrancar ya sabe que día es sin necesidad de aclararlo
-- Solo te va a preguntar a que hora de ayer lo ejecutaste. Ejemplo: 10:30 (y hace la conversión a UTC)
-- Recopila entonces todos los IOC de hoy + los IOC de ayer desde las 10:31 hasta el final de dicho día
-- Si es LUNES, ni te pregunta a que hora lo ejecutaste, agarra solo Sabado, Domingo y Lunes
-- Las familias de Malware Bazaar a analizar las toma de un archivo personalizable llamado familias.txt
-- Algunos detalles extras, como un control en el input del horario (xx:xx)
+- Solo te va a preguntar a que hora de ayer lo ejecutaste. Ejemplo: 10:30 (y hace la conversión a UTC).
+- Recopila entonces todos los IOC de hoy + los IOC de ayer desde las 10:31 hasta el final de dicho día.
+- Si es LUNES, ni te pregunta a que hora lo ejecutaste, agarra por el mismo Sabado, Domingo y Lunes.
+- Las familias de MalwareBazaar a analizar las toma de un archivo personalizable llamado familias.txt.
+- Hay algunos detalles extras, como un control en el input del horario (xx:xx).
 ```
 
 
