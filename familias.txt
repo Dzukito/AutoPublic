@@ -1,0 +1,5 @@
+qakbot
+bumblebee
+dridex
+bazaloader
+log4j
