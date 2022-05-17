@@ -7,6 +7,9 @@ pd.options.mode.chained_assignment = None  #Sirve para quitar un warning molesto
 from bs4 import BeautifulSoup as bs #para hacer scrapping
 import requests
 
+import re
+import sys
+
 import datetime
 def formatoFecha(fecha):
   if(fecha<10):
@@ -196,13 +199,19 @@ anio=str(datetime.datetime.today().year)
 hora="00"
 minutos="00"
 
+r = re.compile('.{2}:.{2}')
+
 print("[AutoPublic]: Hoy es "+datetime.datetime.today().strftime('%Y-%m-%d'))
 print(" ")
 if(datetime.datetime.today().weekday()!=0):
    print("<?>: Ingresa la hora en la que se ejecuto AutoPublic ayer (hh:mm): ")
    hora=input()
-   minutos= hora[3:]
-   hora=str(int(hora[:2])+3) #sumar el UTC de diferencia horaria
+   if r.match(hora): 
+      minutos= hora[3:]
+      hora=str(int(hora[:2])+3) #sumar el UTC de diferencia horaria
+   else:
+      print("<!>:Formato de hora no valido, por favor, introducir horario en formato (hh:mm). Ej: 10:10 ")
+      exit()
 
 print("<?>: Ingresa el nombre del CSV a guardar (sin .csv) ")
 archivo=input()
