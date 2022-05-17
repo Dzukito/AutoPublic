@@ -26,7 +26,7 @@ def feodo():
 
 #Path donde se guarda el CSV de feodo que siempre se descarga
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-  local_file="/Users/Fede y Nico/Desktop/AutoPublic/fuenteFeodo.csv"
+  local_file="./fuenteFeodo.csv"
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   
   request.urlretrieve(remote_url, local_file)
@@ -102,7 +102,10 @@ def scrapearTabla(url):
 def malbazaar():
   print("")
   print("[Public]: Se inicio MALWARE BAZAAR;")
-  tag=["qakbot","bumblebee","dridex","bazaloader","log4j"]
+  tag=[]
+  with open("./familias.txt","r") as f:
+    tag = f.read().splitlines()
+     
   
   dataFramesAUnir= []
   for familia in tag: 
