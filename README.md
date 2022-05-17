@@ -31,7 +31,7 @@ $ cd AutoPublic
 ```
 
 ## Uso
-### AutoPublic Version 1.0
+### AutoPublic v1.0
 ```console
 $ python AutPublic.py
 ```
