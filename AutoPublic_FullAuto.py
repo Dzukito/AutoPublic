@@ -177,7 +177,7 @@ def banner():
     
 		>Collections: Public Sources                                                                                               
                 >FeodoTracker & MalwareBazaar                                                                                   
-                >v2.1 FullAuto 2022-05-16                                                                                   
+                >v2.1 FullAuto 2022-05-17                                                                                   
                
     '''
 
