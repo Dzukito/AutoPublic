@@ -19,7 +19,7 @@ def feodo():
 
 #Path donde se guarda el CSV de feodo que siempre se descarga
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-  local_file="/Users/Usuario1/Desktop/fuenteFeodo.csv"
+  local_file="./fuenteFeodo.csv"
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
   
   request.urlretrieve(remote_url, local_file)
