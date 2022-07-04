@@ -44,14 +44,14 @@ def feodo():
   
   #si es lunes, traeme los IOCs de el sabado y el domingo
   if(datetime.datetime.today().weekday()==0):
-    dataDomingo=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]==str(int(dia)-1))]
-    dataSabado=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]==str(int(dia)-2))]
+    dataDomingo=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]=="0"+str(int(dia)-1))]
+    dataSabado=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]=="0"+str(int(dia)-2))]
     dataAyer=pd.concat([dataDomingo,dataSabado])
 
   #si es dia de semana, traeme los de ayer, ya sea: si lo ejecute a las 10:20, los que se subieron de 10:20 a 11:00 y de 11:00 a el fin del dia.
   else:
-    dataAyerOtrasHoras=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]==str(int(dia)-1)) & (data.first_seen_utc.str[10:13].astype(int)>int(hora))]
-    dataAyerOtrosMinutos=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]==str(int(dia)-1)) & (data.first_seen_utc.str[10:13].astype(int)==int(hora)) & (data.first_seen_utc.str[14:16].astype(int)>int(minutos))]
+    dataAyerOtrasHoras=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]=="0"+str(int(dia)-1)) & (data.first_seen_utc.str[10:13].astype(int)>int(hora))]
+    dataAyerOtrosMinutos=data[(data.first_seen_utc.str[:4]==anio) & (data.first_seen_utc.str[5:7]==mes)  & (data.first_seen_utc.str[8:10]=="0"+str(int(dia)-1)) & (data.first_seen_utc.str[10:13].astype(int)==int(hora)) & (data.first_seen_utc.str[14:16].astype(int)>int(minutos))]
     dataAyer=pd.concat([dataAyerOtrasHoras,dataAyerOtrosMinutos])
     
   dataRequerida=pd.concat([dataHoy,dataAyer])
@@ -135,15 +135,15 @@ def malbazaar():
   
   #si es Lunes, agarrame los del Sabado y domingo
   if(datetime.datetime.today().weekday()==0):
-    dataDomingo=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]==str(int(dia)-1))]
-    dataSabado=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]==str(int(dia)-2))]
+    dataDomingo=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]=="0"+str(int(dia)-1))]
+    dataSabado=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]=="0"+str(int(dia)-2))]
     dataAyer=pd.concat([dataDomingo,dataSabado])
 
   #si es dia de semana, traeme los de ayer, ya sea: si lo ejecute a las 10:20, los que se subieron de 10:20 a 11:00 y de 11:00 a el fin del dia. 
   else:
     print(data.Fecha.str[14:16])
-    dataAyerOtrasHoras=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]==str(int(dia)-1)) & (data.Fecha.str[10:13].astype(int)>int(hora))]
-    dataAyerOtrosMinutos=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]==str(int(dia)-1)) & (data.Fecha.str[10:13].astype(int)==int(hora)) & (data.Fecha.str[14:16].astype(int)>int(minutos))]
+    dataAyerOtrasHoras=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]=="0"+str(int(dia)-1)) & (data.Fecha.str[10:13].astype(int)>int(hora))]
+    dataAyerOtrosMinutos=data[(data.Fecha.str[:4]==anio) & (data.Fecha.str[5:7]==mes)  & (data.Fecha.str[8:10]=="0"+str(int(dia)-1)) & (data.Fecha.str[10:13].astype(int)==int(hora)) & (data.Fecha.str[14:16].astype(int)>int(minutos))]
     dataAyer=pd.concat([dataAyerOtrasHoras,dataAyerOtrosMinutos])
     
 
